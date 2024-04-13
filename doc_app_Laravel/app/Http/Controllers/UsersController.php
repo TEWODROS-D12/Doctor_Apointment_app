@@ -138,7 +138,11 @@ class UsersController extends Controller
      */
     public function logout(){
         $user = Auth::user();
-        $user->currentAccessToken()->delete();
+        
+         //  this is what i replace
+        // $user-> currentAccessToken()->delete();
+
+        $user()->currentAccessToken()->delete();
 
         return response()->json([
             'success'=>'Logout successfully!',
