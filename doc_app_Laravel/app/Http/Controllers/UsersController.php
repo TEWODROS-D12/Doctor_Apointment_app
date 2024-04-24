@@ -142,7 +142,7 @@ class UsersController extends Controller
          //  this is what i replace
         // $user-> currentAccessToken()->delete();
 
-        $user()->currentAccessToken()->delete();
+        $user->currentAccessToken()->delete();
 
         return response()->json([
             'success'=>'Logout successfully!',
