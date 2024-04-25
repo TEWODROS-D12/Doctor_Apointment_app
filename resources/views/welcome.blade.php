@@ -55,10 +55,9 @@
 							<li class="active">
 								<a href="index-2.html">Home</a>
 							</li>
-							
-							
-								
-
+							<li class="active">
+								<a href="#contact_us">contact us</a>
+							</li>
 									@auth
 									<li class="has-submenu">
 										<a href="#">Doctors <i class="fas fa-chevron-down"></i></a>
@@ -71,21 +70,28 @@
 								    </ul>
 								    </li>
 									@endauth
-									
-								
-								
-							
-								
-							
-							<li>
-								<a href="admin/index.html" target="_blank">Admin</a>
-							</li>
-							
-							
 						</ul>		 
-					</div>		 
+					</div>	
+		   
+				<!-- / Login and Register -->
 					<ul class="nav header-navbar-rht">
 						<li class="nav-item contact-item">
+							<div>
+								@if (Route::has('login'))
+							
+								@auth
+									<a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><button type="button" class="btn btn-outline-primary">Dashboard</button></a>
+								@else
+							
+								<div class="d-inline p-2 bg-primary text-white"><a href="{{ route('login') }}">Login</button></a></div>
+								
+									@if (Route::has('register'))
+									<div class="btn btn-outline-primary"><a href="{{ route('register') }}">Register</button></a></div>
+								    @endif
+
+								@endauth
+					  	   @endif
+							</div>
 							<div class="header-contact-img">
 								<i class="far fa-hospital"></i>							
 							</div>
@@ -109,26 +115,6 @@
 							<p>Address society issue based on real time responce</p>
 						</div>
                          
-						<!-- Login and Register -->
-                       <center>
-                            <div >
-                                @if (Route::has('login'))
-                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                        @auth
-                                            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><button type="button" class="btn btn-outline-primary">Dashboard</button></a>
-                                        @else
-                                            <a href="{{ route('login') }}" class="nav-link header-login"><button type="button" class="btn btn-outline-success">Login</button></a>
-                    
-                                            @if (Route::has('register'))
-                                                <a href="{{ route('register') }}"class="nav-link header-login"><button type="button" class="btn btn-outline-primary">Register</button></a>
-                                            @endif
-                                        @endauth
-                                    </div>
-                                @endif
-                            </div>
-                       </center>
-                            
-						<!-- / Login and Register --> -->
 						
 					</div>
 				</div>
@@ -209,7 +195,7 @@
 			<footer class="footer">
 				
 				<!-- Footer Top -->
-				<div class="footer-top">
+				<div class="footer-top" id="contact_us">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-lg-3 col-md-6">
