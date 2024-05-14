@@ -5,7 +5,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<title>Doctor panel</title>
+		<title>Doctor portal</title>
 		
 		<!-- Favicons -->
 		<link type="image/x-icon" href="assets/img/favicon.png" rel="icon">
@@ -52,11 +52,12 @@
 							</a>
 						</div>
 						<ul class="main-nav">
-							<li class="active">
-								<a href="index-2.html">Home</a>
+							
+							<li>
+								<a href="#contact_us">About us</a>
 							</li>
-							<li class="active">
-								<a href="#contact_us">contact us</a>
+							<li>
+								<a href="#speciality">Specialities</a>
 							</li>
 									@auth
 									<li class="has-submenu">
@@ -78,19 +79,14 @@
 						<li class="nav-item contact-item">
 							<div>
 								@if (Route::has('login'))
-							
-								@auth
-									<a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><button type="button" class="btn btn-outline-primary">Dashboard</button></a>
-								@else
-							
 								<div class="d-inline p-2 bg-primary text-white"><a href="{{ route('login') }}">Login</button></a></div>
 								
-									@if (Route::has('register'))
-									<div class="btn btn-outline-primary"><a href="{{ route('register') }}">Register</button></a></div>
-								    @endif
-
-								@endauth
-					  	   @endif
+								@else
+								    
+								@if (Route::has('register'))
+								<div class="btn btn-outline-primary"><a href="{{ route('register') }}">Register</button></a></div>
+								@endif	
+					      	   @endif
 							</div>
 							<div class="header-contact-img">
 								<i class="far fa-hospital"></i>							
@@ -111,8 +107,11 @@
 				<div class="container-fluid">
 					<div class="banner-wrapper">
 						<div class="banner-header text-center">
-							<h1>Make an Appointment</h1>
-							<p>Address society issue based on real time responce</p>
+							
+							<h1><p>make appointment </p>save your time</h1>
+							{{-- <h2>አርባምንጭ ጀነራል ሆስፒታል</h2> --}}
+							<p>የማህበረስባችንን የጤና ችግር መፍታት የሁልጊዜ ተግባራችን ነው! </p>
+							
 						</div>
                          
 						
@@ -122,7 +121,7 @@
 			<!-- /Home Banner -->
 			  
 			<!-- Clinic and Specialities -->
-			<section class="section section-specialities">
+			<section class="section section-specialities" id="speciality">
 				<div class="container-fluid">
 					<div class="section-header text-center">
 						<h2>Specialities</h2>

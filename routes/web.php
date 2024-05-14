@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DocsController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +27,8 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', [DocsController::class, 'index'])->name('dashboard');
 });
+
+route::get('/home',[HomeController::class,'index']);
+
+
 

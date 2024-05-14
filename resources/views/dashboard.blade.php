@@ -20,7 +20,7 @@
                         </div>
                         {{-- the count of upcoming appointment has been returned --}}
                         {{-- as you can see, the upcoming appointments are returned correctly --}}
-                        <p class="py-4 text-3xl ml-5">{{ count($appointments) }}</p>
+                        {{-- <p class="py-4 text-3xl ml-5">{{ count($appointments) }}</p> --}}
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@
                             @if(isset($reviews))
                                 @php
                                 // get total review count
-                                    $count = count($reviews);
+                                    // $count = count($reviews);
                                     $rating = 0;
                                     $total = 0;
 
@@ -67,7 +67,7 @@
                                 @endphp
                             @endif
                             {{-- return rating --}}
-                            {{ $rating }}
+                            {{-- {{ $rating }} --}}
                         </p>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                             <p>TOTAL</p>
                         </div>
                         {{-- this return how many reviews is given to doctor --}}
-                        <p class="py-4 text-3xl ml-5">{{ count($reviews) }}</p>
+                        {{-- <p class="py-4 text-3xl ml-5">{{ count($reviews) }}</p> --}}
                     </div>
                 </div>
             </div>
