@@ -80,12 +80,12 @@
 							<div>
 								@if (Route::has('login'))
 								<div class="d-inline p-2 bg-primary text-white"><a href="{{ route('login') }}">Login</button></a></div>
-								
-								@else
-								    
 								@if (Route::has('register'))
 								<div class="btn btn-outline-primary"><a href="{{ route('register') }}">Register</button></a></div>
 								@endif	
+								@else
+								    
+								
 					      	   @endif
 							</div>
 							<div class="header-contact-img">
