@@ -9,6 +9,8 @@ class Doctor extends Model
 {
     use HasFactory;
 
+  
+
     //these are fillable input
     protected $fillable = [
         'doc_id',
@@ -19,8 +21,11 @@ class Doctor extends Model
         'status',
     ];
 
-    //state this is belong to user table
+    // state this is belong to user table
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+
+   
 }

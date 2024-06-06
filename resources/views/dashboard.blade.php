@@ -51,7 +51,7 @@
                             @if(isset($reviews))
                                 @php
                                 // get total review count
-                                    // $count = count($reviews);
+                                    $count = count($reviews);
                                     $rating = 0;
                                     $total = 0;
 
@@ -66,9 +66,9 @@
                                     }
                                 @endphp
                             @endif
-                            {{-- return rating --}}
-                            {{-- {{ $rating }} --}}
-                        </p>
+                            {{-- return rating
+                            {{ $rating }}
+                        </p> --}}
                     </div>
                 </div>
 

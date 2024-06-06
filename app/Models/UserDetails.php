@@ -19,6 +19,11 @@ class UserDetails extends Model
 
     //state this is belong to user table
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,);
     }
+    
 }
+
+
+
+

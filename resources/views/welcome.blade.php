@@ -57,20 +57,17 @@
 								<a href="#contact_us">About us</a>
 							</li>
 							<li>
-								<a href="#speciality">Specialities</a>
+								<a href="#speciality">Departments</a>
 							</li>
-									@auth
+								
 									<li class="has-submenu">
 										<a href="#">Doctors <i class="fas fa-chevron-down"></i></a>
 									<ul class="submenu">
-									<li>
-									<a href="{{ url('/dashboard') }}">Dashboard</a>
-									</li>
-									<li><a href="appointments.html">Appointments</a></li>
-									<li><a href="my-patients.html">Patients List</a></li>
+									<li><a href="appointments.html">services</a></li>
+									<li><a href="my-patients.html">Research</a></li>
 								    </ul>
 								    </li>
-									@endauth
+								
 						</ul>		 
 					</div>	
 		   
@@ -79,14 +76,13 @@
 						<li class="nav-item contact-item">
 							<div>
 								@if (Route::has('login'))
-								<div class="d-inline p-2 bg-primary text-white"><a href="{{ route('login') }}">Login</button></a></div>
-								@if (Route::has('register'))
-								<div class="btn btn-outline-primary"><a href="{{ route('register') }}">Register</button></a></div>
+								<div class="d-inline p-2 bg-primary text-white"><a href="{{ route('login') }}">Login</button></a></div>						
 								@endif	
-								@else
-								    
+{{-- 								
+								@if (Route::has('register'))
+								<div class="btn btn-outline-primary"><a href="{{ route('register') }}">Register</button></a></div>    
 								
-					      	   @endif
+					      	   @endif --}}
 							</div>
 							<div class="header-contact-img">
 								<i class="far fa-hospital"></i>							
@@ -124,8 +120,8 @@
 			<section class="section section-specialities" id="speciality">
 				<div class="container-fluid">
 					<div class="section-header text-center">
-						<h2>Specialities</h2>
-						<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<h2>Departments</h2>
+						<p class="sub-title">The hospital has over 200 beds (7,11) with a total of 410 workers. Among these, 251 are health professionals, and 159 are administrative staffs. The hospital provides preventive, curative and rehabilitative services for Gamo and nearby zones.</p>
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-md-9">
@@ -205,7 +201,7 @@
 										<img src="assets/img/AMUfooterlogo.png" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<p>Arba Minch General Hospital is a public hospital located in Arba Minch town, Ethiopia. It is one of the general hospitals in SNNPR region of Gamo Zone. It has a bed capacity for 200 patients. </p>
 										<div class="social-icon">
 											<ul>
 												<li>
