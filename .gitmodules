@@ -1,0 +1,3 @@
+[submodule "Doctor_Apointment_app"]
+	path = Doctor_Apointment_app
+	url = https://github.com/TEWODROS-D12/Doctor_Apointment_app.git
