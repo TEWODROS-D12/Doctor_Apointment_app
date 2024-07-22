@@ -9,6 +9,7 @@ steps to run this code in cmd
 - run php artisan serve
 - npm run dev
 
-  ### if you need any assistance contact me via Telegram +2519-46 0754 47
+  ### if you need any assistance contact me via Telegram or @tewodros46
+  +2519-46 0754 47
 
 
